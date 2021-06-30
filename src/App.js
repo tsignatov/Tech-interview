@@ -88,7 +88,7 @@ export const App = ({comments, buttons, counter, bet, draw, manageNumbers, manag
       </div>
         <div className="comments">
             {comments.map((comment, index) => {
-                return <div className="comment-wrapper" key={index}>Name: <span className="comment" key={index} >{comment.name}</span></div>;
+                return <div className={`comment-wrapper ${comments.length - counter <= index ? 'bold' : ''}`} key={index}>Name: <span className="comment" key={index} >{comment.name}</span></div>;
             })}
         </div>
     </div>
