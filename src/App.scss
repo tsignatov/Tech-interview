@@ -1,0 +1,44 @@
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .field {
+    display: flex;
+    max-width: 800px;
+    min-width: 380px;
+    flex-wrap: wrap;
+    .btn-wrapper {
+      padding: 5px;
+      width: 10%;
+      box-sizing: border-box;
+      .button {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid red;
+      }
+      .clicked {
+        background: red;
+      }
+      .button:hover {
+        cursor: pointer;
+      }
+      .disabled {
+        background: rgba(59, 59, 59, 0.3);
+        cursor: auto;
+      }
+    }
+  }
+  .bet-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    input {
+      width: 80px;
+      height: 40px;
+      margin: 10px;
+    }
+  }
+}
