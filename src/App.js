@@ -9,7 +9,7 @@ export const App = ({comments, buttons, counter, bet, draw, manageNumbers, manag
           itemsTest.push({number:i, state: 'default'});
       }
       manageNumbers(itemsTest);
-      startTimer(5, time);
+      startTimer(180, time);
       getComments();
     }, []);
     
@@ -72,7 +72,6 @@ export const App = ({comments, buttons, counter, bet, draw, manageNumbers, manag
   
   return (
     <div className="App">
-        {console.log(comments)}
         <div className="field">
             {buttons.map((item, index) => {
               return <div className="btn-wrapper" key={index}><span className={`button ${item.state}`} onClick={() => addNumber(item.number, item.state)}>{item.number}</span></div>;

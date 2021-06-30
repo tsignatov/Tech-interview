@@ -14,11 +14,6 @@ const mapDispatchToProps = dispatch => {
         manageDraw: (payload) => dispatch(appActions.manageDraw(payload)),
         commentsFetchSuccessfulAction: (payload) => dispatch(appActions.commentsFetchSuccessfulAction(payload)),
         getComments: () => dispatch(appActions.getComments())
-        // manageNumbers: (payload) => dispatch({ type: 'MANAGENUMBERS', payload }),
-        // manageCounter: (payload) => dispatch({ type: 'MANAGECOUNTERS', payload }),
-        // manageBet: (payload) => dispatch({ type: 'MANAGEBET', payload }),
-        // manageDraw: (payload) => dispatch({ type: 'MANAGEDRAW', payload }),
-        // getComments: () => dispatch({ type: 'GETCOMMENTS' })
     }
 };
 export const Container = connect(mapStateToProps, mapDispatchToProps)(App);
