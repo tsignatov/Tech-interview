@@ -77,15 +77,21 @@ export const App = ({comments, buttons, counter, bet, draw, manageNumbers, manag
               return <div className="btn-wrapper" key={index}><span className={`button ${item.state}`} onClick={() => addNumber(item.number, item.state)}>{item.number}</span></div>;
             })}
         </div>
-      <div className="bet-section">
-          <label>Bet</label>
-          <input type="number" step="0.2" value={bet} onChange={(event) => handleBetSection(event, true)}/>
-          <label>Draw</label>
-          <input type="number" step="1" value={draw} onChange={(event) => handleBetSection(event, false)}/>
-          <label>Price</label>
-          <input type="number" value={counter * draw * bet} disabled/>
-          <div>Time <span ref={time}>03:00</span> minutes!</div>
-      </div>
+        <div className="bet-section">
+            <div>
+                <label>Bet</label>
+                <input type="number" step="0.2" value={bet} onChange={(event) => handleBetSection(event, true)}/>
+            </div>
+            <div>
+                <label>Draw</label>
+                <input type="number" step="1" value={draw} onChange={(event) => handleBetSection(event, false)}/>
+            </div>
+            <div>
+                <label>Price</label>
+                <input type="number" value={counter * draw * bet} disabled/>
+            </div>
+        </div>
+        <div className="bold">Time <span ref={time}>03:00</span> minutes!</div>
         <div className="comments">
             {comments.map((comment, index) => {
                 return <div className={`comment-wrapper ${comments.length - counter <= index ? 'bold' : ''}`} key={index}>Name: <span className="comment" key={index} >{comment.name}</span></div>;

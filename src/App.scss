@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .App {
   display: flex;
   align-items: center;
@@ -11,9 +14,8 @@
     .btn-wrapper {
       padding: 5px;
       width: 10%;
-      box-sizing: border-box;
       .button {
-        height: 60px;
+        height: 68px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -34,15 +36,20 @@
   .bet-section {
     display: flex;
     align-items: center;
-    justify-content: center;
-    input {
-      width: 80px;
-      height: 40px;
-      margin: 10px;
+    > div {
+      display: flex;
+      align-items: center;
+      width: 33.3%;
+      padding: 10px;
+      input {
+        flex: 1;
+        height: 40px;
+        margin-left: 10px;
+        width: 100%;
+      }
     }
   }
   .bold {
     font-weight: bold;
-    background: blue;
   }
 }
